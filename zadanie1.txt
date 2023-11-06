@@ -1,0 +1,36 @@
+#include iostream
+#include fstream
+#include string
+using namespace std;
+int main()
+{
+	fstream plik;
+	string linia;
+	int liczba1 = 0;
+	int liczba2 = 0;
+	plik.open(tekst.txt, iosin);
+	if (plik.good() == true) {
+		cout  Plik istnieje  endl;
+		while (getline(plik, linia))
+		{
+			if (stoi(linia)2%2 == 0)
+			{
+				cout  stoi(linia)  endl;
+			}
+			if (stoi(linia) == 2) {
+				liczba1 = liczba1 + stoi(linia);
+			}
+			if (stoi(linia) == 4) {
+				liczba2 = liczba2 + stoi(linia);
+			}
+		}
+		cout  liczba1 + liczba2  endl;
+	}
+	else {
+		cout  Plik nie istnieje  endl;
+	}
+
+	plik.close();
+
+	return 0;
+}

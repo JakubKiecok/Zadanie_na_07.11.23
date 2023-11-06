@@ -1,0 +1,27 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main()
+{
+	fstream plik;
+	string linia;
+	plik.open("tekst.txt", ios::in);
+	if (plik.good() == true) {
+		cout << "Plik istnieje" << endl;
+		while (getline(plik, linia))
+		{
+			if (stoi(linia)/2%3 == 1)
+			{
+				cout << stoi(linia) << endl;
+			}
+		}
+	}
+	else {
+		cout << "Plik nie istnieje" << endl;
+	}
+
+	plik.close();
+
+	return 0;
+}
